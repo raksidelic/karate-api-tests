@@ -1,7 +1,7 @@
 Feature: Sample API test
 
   Background:
-    * url 'http://localhost:3000'
+    * url 'http://dental-frontend:3000'
 
   Scenario: Get all users
     Given path '/users'
