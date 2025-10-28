@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'Maven_3_9'   // Jenkins'te Maven tool ismini buna göre ayarla
-        jdk 'JDK17'         // Jenkins'te JDK tool adın
+        jdk 'JDK21'         // Jenkins'te JDK tool adın
     }
 
     stages {
