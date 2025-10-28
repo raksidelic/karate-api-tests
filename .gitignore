@@ -1,10 +1,23 @@
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Maven target klasörü (derleme çıktısı)
+target/
+
+# IDE ayar dosyaları
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Eclipse dosyaları
+.classpath
+.project
+.settings/
+
+# OS sistem dosyaları
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Loglar
+*.log
+
+# Temporary files
+*.tmp
