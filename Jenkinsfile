@@ -20,21 +20,18 @@ pipeline {
         }
 
         stage('Publish Reports') {
-            steps {
-                // Publish JUnit results for Jenkins test view
-                junit '**/target/surefire-reports/*.xml'
+    steps {
+        publishHTML(target: [
+            reportDir: 'target/karate-reports', 
+            reportFiles: 'karate-summary.html', 
+            reportName: 'Karate Cucumber Report', 
+            alwaysLinkToLastBuild: true, 
+            keepAll: true, 
+            allowMissing: false
+        ])
+    }
+}
 
-                // Publish Karate HTML report
-                publishHTML([[
-                    reportDir: 'target/karate-reports',
-                    reportFiles: 'karate-summary.html',
-                    reportName: 'Karate Cucumber Report',
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    allowMissing: false
-                ]])
-            }
-        }
     }
 
     post {
